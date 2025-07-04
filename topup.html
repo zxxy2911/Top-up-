@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top Up - xXzyyGames</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">xXzyyGames</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="topup.html">Top Up</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Form Top Up</h2>
+    <form id="topupForm">
+      <input type="text" id="userId" placeholder="ID Game / Nomor HP" required />
+      
+      <select id="product" required>
+        <option disabled selected>Pilih Produk</option>
+        <option>Mobile Legends</option>
+        <option>Free Fire</option>
+        <option>PUBG</option>
+        <option>Genshin Impact</option>
+        <option>Pulsa Telkomsel</option>
+      </select>
+      
+      <input type="number" id="amount" placeholder="Jumlah Diamond / Pulsa" required />
+      
+      <button class="btn" type="submit">Kirim</button>
+    </form>
+
+    <br />
+    <button class="btn" onclick="openPopup()">Lihat Metode Pembayaran</button>
+  </section>
+
+  <!-- Popup Metode Pembayaran -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Metode Pembayaran</h3>
+      <div class="payment-method">
+        <h4>DANA</h4>
+        <p><strong>Nomor:</strong> 085216271207</p>
+        <p><strong>Nama:</strong> Mariatun hxxxxah</p>
+      </div>
+      <div class="payment-method">
+        <h4>SeaBank</h4>
+        <p><strong>Rekening:</strong> 901435957134</p>
+        <p><strong>Nama:</strong> M. Ezzar Aditya</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 xXzyyGames</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/transaction.js"></script>
+</body>
+</html>

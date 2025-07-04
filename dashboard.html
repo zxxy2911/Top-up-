@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - xXzyyGames</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">xXzyyGames</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="topup.html">Top Up</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Selamat Datang, <span id="userDisplay"></span>!</h2>
+    <p>Berikut adalah riwayat transaksi kamu:</p>
+
+    <!-- 🔍 Filter Pencarian -->
+    <input type="text" id="searchInput" placeholder="Cari transaksi..." />
+
+    <!-- 📜 Riwayat Transaksi -->
+    <div id="transactionHistory"></div>
+
+    <!-- 📥 Tombol Export -->
+    <div class="export-buttons">
+      <button class="btn" onclick="exportToCSV()">Export ke CSV</button>
+      <button class="btn" onclick="exportToPDF()">Export ke PDF</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 xXzyyGames</p>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/transaction.js"></script>
+  <script src="js/export.js"></script>
+</body>
+</html>
